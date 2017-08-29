@@ -77,7 +77,7 @@ class PageTopicAnalyzer:
         return newAnalyzer
 
     def rank(self, top):
-        return sorted(self.wordCount, key=self.wordCount.get)[:top]
+        return sorted(self.wordCount, key=self.wordCount.get, reverse=True)[:top]
 
     def unigram(self):
         words = [y for x in self.bagOfWords for y in x]
